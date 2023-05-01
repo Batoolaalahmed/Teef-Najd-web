@@ -1,0 +1,553 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Services</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.PNG">
+</head>
+<body>
+<section>
+  <div id="navbar">
+    <a href="index.html" id="logo"><img src="./assets/images/logo.PNG"></a>
+    <div id="navbar-right">
+     <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <li><a href="sourdough.html" target="_self">about</a></li>
+      <li><a href="recipes.html" target="_self">projects</a</li>
+      <li><a href="#" target="_self">Services</a></li>
+      <li><a href="video.html" target="_self">contact</a></li>
+      <li><a href="Gallery.html" target="_self">Gallery</a></li>
+    </ul>
+    </div>
+  </section>
+  </div>
+  
+
+ 
+
+      <div class="content">
+        <div class="cta__image">
+          <picture>
+            <img src="./assets/images/" alt>
+          </picture>
+        </div>
+        <br>
+        <br>
+
+        <header  style="background-color:rgb(238, 244, 246); font-family: 'Source Serif 4'; font-style: normal;
+        font-weight: 700;
+        font-size: 4vw;">
+          <h3>........</h3>
+        </header>
+        <br>
+        <br>
+
+        <br>
+        <br>
+
+        <table id="myTable">
+          <tr>
+           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+            <th onclick="sortTable(0)" style="padding:10px;">Service</th>
+            <th onclick="sortTable(1)" style="padding:10px;">exampls</th>
+            <th onclick="sortTable(2)" style="padding:10px;">start at</th>
+            <th onclick="sortTable(3)" style="padding:10px;">inquires</th>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/mixing.JPG" style="width: 30%;"></td>
+            <td>.....</td>
+            <td>.....</td>
+            <td>....</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/lame.JPG" style="width: 30%; "></td>
+            <td>....</td>
+            <td>....</td>
+            <td>....</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/thermo.PNG" style="width: 30%; "></td>
+            <td>....</td>
+            <td>....</td>
+            <td>....</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/knief.PNG" style="width: 30%; "></td>
+            <td>....</td>
+            <td>....</td>
+            <td>....</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/scale.JPEG" style="width: 30%; "></td>
+            <td>....</td>
+            <td>....</td>
+            <td>....</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/proofing.JPEG" style="width: 30%; "></td>
+            <td>....</td>
+            <td>Nice to haves</td>
+            <td>Hand Tool</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/dutch.JPG" style="width: 30%; "></td>
+            <td>Dutch Oven</td>
+            <td>Nice to haves</td>
+            <td>Cookware</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/paper.PNG" style="width: 30%; "></td>
+            <td>Parchment Paper</td>
+            <td>Nice to haves</td>
+            <td>Cookware</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/whisk.JPG" style="width: 30%; "></td>
+            <td>Whisk</td>
+            <td>Nice to haves</td>
+            <td>Hand Tool</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/stone.JPEG" style="width: 30%; "></td>
+            <td>Baking Stone</td>
+            <td>Should haves</td>
+            <td>Cookware</td>
+          </tr>
+        </table>
+
+        <script>
+          function sortTable(n) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.getElementById("myTable");
+            switching = true;
+            //Set the sorting direction to ascending:
+            dir = "asc"; 
+            /*Make a loop that will continue until
+            no switching has been done:*/
+            while (switching) {
+              //start by saying: no switching is done:
+              switching = false;
+              rows = table.rows;
+              /*Loop through all table rows (except the
+              first, which contains table headers):*/
+              for (i = 1; i < (rows.length - 1); i++) {
+                //start by saying there should be no switching:
+                shouldSwitch = false;
+                /*Get the two elements you want to compare,
+                one from current row and one from the next:*/
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                /*check if the two rows should switch place,
+                based on the direction, asc or desc:*/
+                if (dir == "asc") {
+                  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    //if so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                  }
+                } else if (dir == "desc") {
+                  if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    //if so, mark as a switch and break the loop:
+                    shouldSwitch = true;
+                    break;
+                  }
+                }
+              }
+              if (shouldSwitch) {
+                /*If a switch has been marked, make the switch
+                and mark that a switch has been done:*/
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                //Each time a switch is done, increase this count by 1:
+                switchcount ++;      
+              } else {
+                /*If no switching has been done AND the direction is "asc",
+                set the direction to "desc" and run the while loop again.*/
+                if (switchcount == 0 && dir == "asc") {
+                  dir = "desc";
+                  switching = true;
+                }
+              }
+            }
+          }
+          </script>
+        
+
+        
+     
+
+
+          
+          
+          
+
+        <section style="width: 100%; height: 40px; background-color: rgb(255, 255, 255);"></section>
+        <footer>
+          <div>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/" target="_blank"
+              class="fa fa-facebook-f fa-lg fa-2x hover-color padding-right"></a>
+            <!--Instagram-->
+            <a href="https://www.instagram.com/" target="_blank"
+              class="fa fa-instagram fa-lg fa-2x hover-color padding-right"></a>
+            <!-- Twitter -->
+            <a href="https://twitter.com/" target="_blank" class="fa fa-twitter fa-lg fa-2x hover-color padding-right"></a>
+            <!-- Pinterest -->
+            <a href="https://www.pinterest.com/" target="_blank"
+              class="fa fa-pinterest fa-lg fa-2x hover-color padding-right"></a>
+            <!-- Linkedin -->
+            <a href="https://www.linkedin.com/" target="_blank"
+              class="fa fa-linkedin fa-lg fa-2x hover-color padding-right"></a>
+            <!-- GitHub -->
+            <a href="https://www.github.com/" target="_blank" class="fa fa-github-alt fa-lg fa-2x hover-color"></a>
+          </div>
+        </footer>
+          
+   
+
+
+   
+       
+       <style>
+        * {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  background-color: rgb(255, 255, 255);
+  padding: 20px 10px;
+  transition: 0.2s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  border-bottom: 5px solid #27554a;
+ 
+}
+
+#navbar a {
+  float: center;
+  color: #27554a;
+  text-align: center;
+  padding: 0px 20px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+#navbar #logo {
+  transition: 0.4s;
+  position: fixed;
+            display: block;
+            width: 190px;
+            height: 170px;
+            background-size: contain;
+            z-index: 1;
+            top: 20px;
+            left: 50px;
+}
+
+
+#navbar a:hover {
+  border-bottom: solid 4px #b44d81e7;
+}
+
+
+#navbar-right {
+  float: right;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+  #navbar {
+    padding: 30px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: right;
+    z-index: 101;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+
+
+   /* navagitton bar End */
+
+
+.menu {
+display: flex;
+flex-direction: row;
+list-style-type: none;
+margin: 0;
+padding: 0;
+z-index: 110;
+}
+
+.menu > li {
+margin: 0 1rem;
+overflow: hidden;
+}
+
+.menu-button-container {
+display: none;
+height: 100%;
+width: 30px;
+cursor: pointer;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+#menu-toggle {
+display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+display: block;
+background-color: #b44d81e7;
+position: fixed;
+top: 30; right: 15;
+height: 4px;
+width: 30px;
+transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+border-radius: 2px;
+z-index: 110;
+}
+
+.menu-button::before {
+content: '';
+margin-top: -8px;
+}
+
+.menu-button::after {
+content: '';
+margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+margin-top: 0px;
+transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+margin-top: 0px;
+transform: rotate(-405deg);
+}
+
+@media (max-width: 900px) {
+.menu-button-container {
+display: flex;
+
+}
+.menu {
+position: absolute;
+top: 0;
+margin-top: 50px;
+left: 0;
+flex-direction: column;
+width: 100%;
+justify-content: center;
+align-items: center;
+z-index: 110;
+}
+#menu-toggle ~ .menu li {
+height: 0;
+margin: 0;
+padding: 0;
+border: 0;
+transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+z-index: 110;
+}
+#menu-toggle:checked ~ .menu li {
+border: 1px solid #b44d81e7;
+height: 2.5em;
+padding: 0.5em;
+transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+z-index: 120;
+}
+.menu > li {
+display: flex;
+justify-content: center;
+margin: 0;
+padding: 0.5em 0;
+width: 100%;
+color: white;
+background-color: rgb(255, 255, 255);
+z-index: 120;
+}
+.menu > li:not(:last-child) {
+border-bottom: 1px solid #444;
+z-index: 120;
+}
+}
+
+   /* image under navbar start */
+
+   .cta__image img {
+     width: 100%;
+     top: 0;
+     z-index: 5;
+     max-width:100%;
+   }
+   
+   .cta img {
+position:relative;
+height: 155px;
+display:block;
+top: 0;
+object-fit: cover;
+z-index: 5;
+
+
+}
+
+ifram, img, object {
+  max-width: 100%;
+  z-index: 5;
+}
+
+/* image under navbar end */
+
+header {
+  padding: 10px;
+  text-align: center;
+  font-size: 40px;
+  color:#27554a;
+  font-family: 'anton' ,Sans-serif;
+  font-weight: lighter;
+}
+
+table {
+  border-spacing: 0;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 2vw;
+  color:rgb(86, 86, 86);
+  max-width: 100%;
+  border-collapse: collapse;
+ 
+ 
+}
+
+th {
+  cursor: pointer;
+  color: white;
+  font-size: 1vw;
+  background-color: #27554a;
+  padding: 10px;
+}
+
+/* highlight on hover */
+
+th:hover {
+  background-color: rgb(183, 234, 244);
+}
+
+th:active {
+  background-color: rgb(183, 234, 244);
+}
+
+.table > th > .sortTable:active {
+  background-color: rgb(183, 234, 244);
+
+}
+
+
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid rgb(201, 199, 199);
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+
+ /*links */
+a {
+      color:rgb(80, 140, 184);
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    footer a {
+      color:white;
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    .padding-right {
+      padding-right: 15px;
+    }
+
+    footer {
+      width: 100%;
+      float: left;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      background-color: #27554a;
+      position: absolute;
+    }
+
+    footer a:hover.hover-color {
+      color: #7fd3b1;
+      text-decoration: none;
+    }
+  
+ 
+     </style>
+
+<script>
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("navbar").style.padding = "30px 10px";
+      document.getElementById("logo").style.width = "100px";
+    } else {
+      document.getElementById("navbar").style.padding = "50px 10px";
+      document.getElementById("logo").style.width = "190px";
+    }
+  }
+  </script>
+
+
+     
+    
+ </body>
+
+
+
+ </html>
