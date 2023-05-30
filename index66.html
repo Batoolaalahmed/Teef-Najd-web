@@ -1,0 +1,967 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TeefHomepage</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.PNG">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo&family=Reem+Kufi&family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  
+ 
+</div>
+<section>
+  <div id="navbar">
+    <a href="index.html" id="logo"><img src="./assets/images/logo_red.jpg"></a>
+   <a  class='contact' href="#" target="_self">تــواصل معنا</a>
+    <div id="navbar-right">
+     <input id="menu-toggle" type="checkbox" />
+
+    <label class='menu-button-container' for="menu-toggle">
+      
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      
+      <li><a href="#" target="_self">قطــاعاتنا</a></li>
+      <li><a href="#" target="_self">منتجــاتنا</a></li>
+      <li><a href="ourprojects.html" target="_self">المــركز الإعلامي</a></li>
+      <li><a href="#" target="_self">التــوظيف</a></li>
+      <li><a href="#" target="_self">تــواصل معنا</a></li>
+    
+
+     
+    </ul>
+
+    
+    </div>
+  </section>
+  </div>
+
+
+  <section class="section-one"> 
+    
+  </section>
+
+  <section>
+
+    <div class="panels">
+      <div class="panels__container">
+        <a href="#" class="panel">
+          <div class="panel__content" style="background-image: url(https://unsplash.it/1000/1100/?image=786);">
+          <h3 class="panel__title">EXPLORE</h3>
+          </div>
+        </a>
+        <a href="#" class="panel">
+          <div class="panel__content" style="background-image: url(https://unsplash.it/1000/1100/?image=883)">
+          <h3 class="panel__title">DISCOVER</h3>
+          </div>
+        </a>
+      </div>
+      </div>
+  </section>
+   
+
+        <footer class="footer-distributed">
+
+          <div class="footer-left">
+            <picture>
+              <img src="./assets/images/logowhite.png" style="width: 50%;" alt>
+            </picture>
+
+
+    
+            <p class="footer-links">
+              <a href="#" class="link-1">الرئيسية</a>
+              
+              <a href="#">قصتنا</a>
+            
+              <a href="#">منتجاتنا</a>
+            
+              <a href="#">أبرز أعمالنا</a>
+              
+              <a href="#">الأسئلة الشائعة</a>
+              
+              <a href="#">تواصل معنا</a>
+            </p>
+    
+            <p class="footer-company-name">مجموعة طيف نجد © 2023</p>
+          </div>
+    
+          <div class="footer-center">
+    
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span> المملكة العربية السعودية ، الرياض</span>  12314، شارع التخصصي ،المعذر الشمالي</p>
+            </div>
+    
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>9200 1183</p>
+            </div>
+    
+           
+    
+          </div>
+    
+          <div class="footer-right">
+    
+           
+    
+            <div class="footer-icons">
+    
+              <a href="https://www.facebook.com/teefnajdgroup/"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/teefnajdgroup"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/teef-najd/mycompany/"><i class="fa fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/teefnajd.group/"><i class="fa fa-instagram"></i></a>
+            
+    
+            </div>
+    
+          </div>
+    
+        </footer>
+
+
+
+     
+       
+   
+
+
+       
+          
+      
+          
+          </div>
+      
+        
+          
+       
+  </div>
+
+  
+
+  <br>
+        <br>
+        <br>
+
+ 
+  <br>
+
+  
+  
+
+    <script>
+      const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('image-animation');
+    }
+  });
+});
+
+const viewbox = document.querySelectorAll('.image');
+viewbox.forEach(image => {
+  observer.observe(image);
+});
+    </script>
+
+
+
+
+    
+
+
+
+          <style>
+            @duration: 1s;
+
+
+@offsetSize: 10%;
+@contentOffset: @offsetSize * 1.4;
+/* @offsetSize * 2 means the content won't appear to move at all. Set to a lower value for squishing effects. */
+
+@textColor: #FFF;
+
+@highlightColor: #FFC12D;
+@borderColor: @highlightColor;
+
+/*////////////////////////////////////////*/
+/* Layout */
+
+.panels {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  pointer-events: none;
+}
+
+.panels__container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+  
+  height: 100%;
+  width: unit( 100 + (10% * 2%));
+  margin: 0 -(@10%);
+  visibility: hidden; 
+}
+
+.panel {
+  display: inline-block;
+  height: 100%;
+  visibility: visible;
+  position: relative; 
+  overflow: hidden;
+  flex: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/*////////////////////////////////////////*/
+/* Image/Text Container */
+
+.panel__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: center center no-repeat;
+  background-size: cover;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: #000;
+    opacity: 0.5;
+    transition: opacity @duration cubic-bezier(.6,.0,.2,1);
+  }
+}
+
+/*////////////////////////////////////////*/
+/* Title */
+
+.panel__title {
+  pointer-events: auto;
+  color: #a22c36;
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s cubic-bezier(.6,.0,.2,1);
+}
+  
+  :before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: #444;
+    background: fade(#000,70%);
+    border: solid 2px #8fa61b;
+    z-index: -1;
+    padding: 0.5em 1em;
+    margin: -0.5em -1em;
+    
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.5s  cubic-bezier(.6,.0,.2,1);
+    transition-property: opacity, transform;
+  }
+
+
+/*////////////////////////////////////////*/
+/* Hover States */
+
+.panel {
+  transform: translate3d(0,0,0);
+  transition: transform  0.5s  cubic-bezier(.6,.0,.2,1);
+}
+  
+  .panel__content { 
+    transform: translateX(50px);
+    transition: transform  0.5s  cubic-bezier(.6,.0,.2,1);
+  }
+  
+  :last-child .panel__content {
+    transform: translateX(10%);
+  }
+  
+  /* Inactive panel */
+  .panels:hover  {
+    transform: translate3d(10%, 0, 0); 
+  }
+      
+    .panel__content { 
+      transform: translateX(10%);             
+    
+    }
+  
+  
+  /* Override styles for an inactive panel AFTER the hovered panel */
+  .panels :hover  { 
+    transform: translate3d(10%, 0, 0);
+  }
+    
+    .panel__content { 
+      transform: translateX(-10%);
+    }
+  
+  
+  /* Active panel */
+  .panels :hover { 
+    z-index: 2;
+    transform: translate3d(10%,0,0);
+    pointer-events: auto;
+    
+    :last-child { transform: translate3d(10%,0,0); }
+    
+    .panel__content { 
+      transform: translateX(10%);
+      :before { opacity: 0; }
+    }
+    
+    .panel__title {
+      color: #FFC12D;
+
+      &:before {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  } 
+}
+
+/*////////////////////////////////////////*/
+/* Vertical layout */
+
+.panels--stacked {
+  
+  .panels__container {
+    width: 100%;
+    height: unit( 100 + (10% * 2),%);
+    margin: -(10%) 0;
+    flex-direction: column;
+  }
+
+  .panel {
+    height: 50%;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+
+    .panel__content {
+      transform: translate3d(0, 10%, 0);
+    }
+
+    &:last-child .panel__content {
+      transform: translate3d(0, -10%e,0);
+    }
+  }
+  
+    /* Inactive panel */
+  &:hover .panel {
+    transform: translate3d(0, -10%, 0);
+
+    .panel__content {
+      transform: translate3d(0, @contentOffset, 0);
+    }
+  }
+
+  /* Override styles for an inactive panel AFTER the hovered panel */
+  & .panel:hover ~ .panel {
+    transform: translate3d(0, 10%, 0);
+
+    .panel__content {
+      transform: translate3d(0, -@contentOffset, 0);
+    }
+  }
+
+  /* Active panel */
+  & .panel:hover {
+    transform: translate3d(0, 10%, 0);
+
+    &:last-child { transform: translate3d(0, -10%, 0); }
+
+    .panel__content {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 550px) {
+  .panels { .panels--stacked; }
+}
+
+/*////////////////////////////////////////*/
+/* Specific Design Setup */
+
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+
+.panel__title {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  
+  @media (max-width: 800px) {
+    font-size: 1.5em;
+  }
+  @media (max-width: 600px) {
+    font-size: 1.25em;
+  }
+}
+
+
+
+          
+            
+           
+            </style>
+
+            
+                
+
+</div>
+ 
+
+
+            
+          
+
+
+
+   
+       
+       <style>
+        * {box-sizing: border-box;}
+
+       
+
+
+
+body { 
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background-color: #ece1e1;
+  background-image: url(./assets/images/pattrenb.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+#navbar {
+  background-color:#fdfdfd;
+  padding: 20px 10px;
+  transition: 0.2s;
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+padding-bottom: 35px;
+padding-top: 40px;
+  top: 0;
+  z-index: 99;
+
+ box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+ 
+
+}
+
+#navbar a {
+  float: left;
+  color: #f0e9e9;
+  text-align: center;
+  padding: 0px 0px;
+  text-decoration: none;
+  font-size:17px; 
+  line-height: 35px;
+  border-radius: 2px;
+  font-family: 'Cairo', sans-serif;;
+  font-weight: bold;
+  
+
+}
+
+#navbar #logo {
+  transition: 0.4s;
+  position: fixed;
+            display: block;
+            width: 190px;
+            height: 170px;
+            background-size: contain;
+            z-index: 1;
+            top: 20px;
+            right:50px;
+            float: right;
+}
+
+
+#navbar a:hover {
+  border-bottom: solid 1px #ffffff;
+}
+
+
+#navbar-right {
+  float: left;
+  margin-left: 50%;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+
+  #navbar a {
+    float: left;
+    display: block;
+    text-align: right;
+    z-index: 101;
+  }
+  #navbar-right {
+    float: left;
+  }
+}
+
+
+   /* navagitton bar End */
+
+
+.menu {
+display: flex;
+flex-direction: row;
+list-style-type: none;
+margin: 0;
+padding: 0;
+z-index: 110;
+
+}
+
+.menu > li {
+margin: 0 1rem;
+overflow: hidden;
+}
+
+.menu-button-container {
+display: none;
+height: 100%;
+width: 30px;
+cursor: pointer;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+#menu-toggle {
+display: none;
+}
+
+
+.contact {
+  display: block;
+position: fixed;
+top: 25; left: 160;
+background-color: #BF1522;
+padding: 5px;
+width: 100px;
+
+
+}
+
+.contact:hover {
+background-color: #87918e;
+background-size: 100%;
+
+
+}
+
+
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+display: block;
+background-color: #BF1522;
+position: fixed;
+top: 40; left: 300;
+height: 4px;
+width: 30px;
+transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+border-radius: 2px;
+z-index: 110;
+}
+
+.menu-button::before {
+content: '';
+margin-top: -8px;
+}
+
+.menu-button::after {
+content: '';
+margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+margin-top: 0px;
+transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+margin-top: 0px;
+transform: rotate(-405deg);
+}
+
+@media (max-width: 2000px) {
+.menu-button-container {
+display: flex;
+
+}
+.menu {
+position: fixed;
+top: 75px;
+left: 0;
+flex-direction: column;
+width: 100%;
+justify-content: center;
+align-items: center;
+z-index: 110;
+}
+#menu-toggle ~ .menu li {
+height: 0;
+margin: 0;
+padding: 0;
+border: 0;
+transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+z-index: 110;
+}
+#menu-toggle:checked ~ .menu li {
+
+height: 6.5em;
+padding: 0.9em;
+transition: height 700ms cubic-bezier(0.23, 1, 0.32, 1);
+z-index: 120;
+}
+.menu > li {
+display: flex;
+justify-content: center;
+margin: 0;
+padding: 0.5em 0;
+width: 50%;
+
+color: white;
+background-color: #0b3536f1;
+
+z-index: 120;
+}
+.menu > li:not(:last-child) {
+border-bottom: 1px solid #444;
+z-index: 120;
+}
+}
+
+
+
+
+   /* image under navbar start */
+   .cta__image img {
+     width: 100%;
+     top: 0;
+     z-index: 5;
+     max-width:100%;
+   }
+   
+   .cta img {
+position:relative;
+height: 155px;
+display:block;
+top: 0;
+object-fit: cover;
+z-index: 5;
+
+
+}
+
+ifram, img, object {
+  max-width: 100%;
+  z-index: 5;
+}
+
+
+h1 {
+  font-weight: 900;
+  font-size: 2.7rem;
+  max-width: 20ch;
+}
+
+p {
+  max-width: 60ch;
+}
+
+a {
+  color: currentcolor;
+}
+
+/* Utilities */
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 14rem), 1fr)
+  );
+  grid-gap: var(--auto-grid-gap, 0);
+  padding: 0;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* Composition */
+.team {
+  --flow-space: 2em;
+}
+
+
+
+a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .padding-right {
+      padding-right: 15px;
+    }
+
+    * {
+  font-family: Open  'cario',sans-serif;
+}
+
+
+
+.footer-distributed{
+	background: #a22c36;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px 'cario',sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'cario';
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  rgb(255, 255, 255);
+	font-size: 14px;
+	font-weight: lighter;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #a22c36;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #ffffff;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #a22c36;
+	border-radius: 3px;
+
+	font-size: 30px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+  
+ 
+     </style>
+
+
+
+<section style="width: 100%; height: 40px; background-color: rgb(255, 255, 255);"></section>
+<footer>
+
+ 
+  <div>
+    
+    <!--Instagram-->
+    <a href="https://www.instagram.com/teefnajd.group/" target="_blank"
+      class="fa fa-instagram fa-lg fa-2x hover-color padding-right"></a>
+    <!-- Twitter -->
+    <a href="https://twitter.com/teefnajdgroup" target="_blank" class="fa fa-twitter fa-lg fa-2x hover-color padding-right"></a>
+   
+    <!-- Linkedin -->
+    <a href="https://www.linkedin.com/company/teef-najd/mycompany/" target="_blank"
+      class="fa fa-linkedin fa-lg fa-2x hover-color padding-right"></a>
+   
+  </div>
+</footer>
+
+  
+     
+    
+ </body>
+
+
+
+ </html>
