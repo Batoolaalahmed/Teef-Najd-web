@@ -17,24 +17,32 @@
 </div>
 <section>
   <div id="navbar">
-    <a href="index.html" id="logo"><img src="./assets/images/logo@3x.png"></a>
+    <a href="index.html" id="logo"><img src="./assets/images/logo_red.jpg"></a>
+   <a  class='contact' href="#" target="_self">تــواصل معنا</a>
     <div id="navbar-right">
      <input id="menu-toggle" type="checkbox" />
+
     <label class='menu-button-container' for="menu-toggle">
+      
     <div class='menu-button'></div>
   </label>
     <ul class="menu">
-      <li><a href="#" target="_self">تواصل معنا</a></li>
-      <li><a href="#" target="_self">أعمالنا</a></li>
-      <li><a href="#" target="_self">قصتنا</a></li>
+      
+      <li><a href="sectors.html" target="_self">قطــاعاتنا</a></li>
+      <li><a href="ourproudcts.html" target="_self">منتجــاتنا</a></li>
+      <li><a href="#" target="_self">المــركز الإعلامي</a></li>
+      <li><a href="#" target="_self">التــوظيف</a></li>
+      <li><a href="#" target="_self">تــواصل معنا</a></li>
+    
 
      
     </ul>
+
+    
     </div>
   </section>
   </div>
 
-  <div>
     <br>
     <br>
    
@@ -632,36 +640,41 @@ body {
   margin: 0;
   font-family: 'Cairo', sans-serif;
   background-color: #ffffff10;
-  background-image: url(/assets/images/pattrenb.jpg);
+ 
   background-repeat: repeat;
   background-size: contain;
 }
 
 #navbar {
-  background-color: rgb(255, 255, 255);
+  background-color:#fdfdfd;
   padding: 20px 10px;
   transition: 0.2s;
   position: fixed;
   width: 100%;
+  max-width: 100%;
+padding-bottom: 35px;
+padding-top: 40px;
   top: 0;
   z-index: 99;
 
+ box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
  
 
 }
 
 #navbar a {
-  float: center;
-  color: #bd232f;
+  float: left;
+  color: #f0e9e9;
   text-align: center;
-  padding: 0px 20px;
+  padding: 0px 0px;
   text-decoration: none;
-  font-size:20px; 
-  line-height: 25px;
-  border-radius: 4px;
+  font-size:17px; 
+  line-height: 35px;
+  border-radius: 2px;
   font-family: 'Cairo', sans-serif;;
   font-weight: bold;
-  margin-right: 30px;
+  
+
 }
 
 #navbar #logo {
@@ -673,14 +686,13 @@ body {
             background-size: contain;
             z-index: 1;
             top: 20px;
-            
             right:50px;
             float: right;
 }
 
 
 #navbar a:hover {
-  border-bottom: solid 4px #f66279;
+  border-bottom: solid 1px #ffffff;
 }
 
 
@@ -693,17 +705,15 @@ body {
 
 
 @media screen and (max-width: 900px) {
-  #navbar {
-    padding: 30px 10px !important;
-  }
+
   #navbar a {
-    float: none;
+    float: left;
     display: block;
     text-align: right;
     z-index: 101;
   }
   #navbar-right {
-    float: none;
+    float: left;
   }
 }
 
@@ -738,14 +748,31 @@ align-items: center;
 #menu-toggle {
 display: none;
 }
+.contact {
+  display: block;
+position: fixed;
+top: 25; left: 160;
+background-color: #BF1522;
+padding: 5px;
+width: 100px;
+
+
+}
+
+.contact:hover {
+background-color: #87918e;
+background-size: 100%;
+
+
+}
 
 .menu-button,
 .menu-button::before,
 .menu-button::after {
 display: block;
-background-color: #f66279;
+background-color: #BF1522;
 position: fixed;
-top: 30; right: 15;
+top: 40; left: 300;
 height: 4px;
 width: 30px;
 transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -777,15 +804,14 @@ margin-top: 0px;
 transform: rotate(-405deg);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 2000px) {
 .menu-button-container {
 display: flex;
 
 }
 .menu {
-position: absolute;
-top: 0;
-margin-top: 50px;
+position: fixed;
+top: 75px;
 left: 0;
 flex-direction: column;
 width: 100%;
@@ -802,10 +828,10 @@ transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
 z-index: 110;
 }
 #menu-toggle:checked ~ .menu li {
-border: 1px solid #f66279;
-height: 2.5em;
-padding: 0.5em;
-transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+
+height: 6.5em;
+padding: 0.9em;
+transition: height 700ms cubic-bezier(0.23, 1, 0.32, 1);
 z-index: 120;
 }
 .menu > li {
@@ -813,9 +839,11 @@ display: flex;
 justify-content: center;
 margin: 0;
 padding: 0.5em 0;
-width: 100%;
+width: 50%;
+
 color: white;
-background-color: rgb(255, 255, 255);
+background-color: #0b3536f1;
+
 z-index: 120;
 }
 .menu > li:not(:last-child) {
@@ -1226,20 +1254,7 @@ a {
   </div>
 </footer>
 
-  <script>
-  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-  window.onscroll = function() {scrollFunction()};
   
-  function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-      document.getElementById("navbar").style.padding = "30px 10px";
-      document.getElementById("logo").style.width = "100px";
-    } else {
-      document.getElementById("navbar").style.padding = "50px 10px";
-      document.getElementById("logo").style.width = "190px";
-    }
-  }
-  </script>
      
     
  </body>
